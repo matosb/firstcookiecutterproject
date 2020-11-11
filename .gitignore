@@ -75,6 +75,9 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
+# ADDED BY ME : .ipynb files
+/notebooks/
+
 # exclude data from source control by default
 /data/
 
