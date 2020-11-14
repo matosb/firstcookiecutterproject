@@ -1,2 +1,2 @@
 [lfs]
-url = "https://tbjfrogserver.jfrog.io/artifactory/firstcookiecutter-repo"
+url = "https://tbjfrogserver.jfrog.io/artifactory/api/lfs/firstcookiecutter-repo"
