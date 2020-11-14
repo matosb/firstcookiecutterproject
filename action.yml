@@ -2,5 +2,6 @@
   env:
     JF_ARTIFACTORY_1: ${{ secrets.JF_ARTIFACTORY_SECRET }}
 - run: |
-    # Ping the server
-    jfrog rt ping
+    jfrog rt dl artifacts/
+    jfrog rt u aether artifacts/
+    jfrog rt bp
