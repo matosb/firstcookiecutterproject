@@ -1,0 +1,6 @@
+- uses: jfrog/setup-jfrog-cli@v1
+  env:
+    JF_ARTIFACTORY_1: ${{ secrets.JF_ARTIFACTORY_SECRET }}
+- run: |
+    # Ping the server
+    jfrog rt ping
