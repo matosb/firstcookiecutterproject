@@ -58,13 +58,45 @@ LR_Model = LogisticRegression(C=0.1,
 # Train the Model
 LR_Model.fit(Xtrain, Ytrain)  
 
+# %% [markdown]
+# # Approach 1 : Pickle approach
+
+# %% [markdown]
+# ## Sauvegarde du modèle entraîné
+
 # %%
-# Calculate the Score 
-score = LR_Model.score(Xtest, Ytest)  
-# Print the Score
-print("Test score: {0:.2f} %".format(100 * score))  
+# Import pickle Package
 
-# Predict the Labels using the reloaded Model
-Ypredict = LR_Model.predict(Xtest)  
+import pickle
 
-Ypredict
+# %%
+# Save the Modle to file in the current working directory
+import os
+
+filepath = "../models/"
+
+Pkl_Filename = "Pickle_RL_Model.pkl"  
+
+with open(os.path.join(filepath, Pkl_Filename), 'wb') as file:  
+    pickle.dump(LR_Model, file)
+
+# %% [markdown]
+# # Approach 2 - Joblib
+
+# %% [markdown]
+# ## Sauvegarde du modèle entraîné
+
+# %%
+# Import Joblib Module from Scikit Learn
+
+from sklearn.externals import joblib
+
+# %%
+# Save RL_Model to file in the current working directory
+
+filepath = "../models/"
+joblib_file = "joblib_RL_Model.pkl"  
+
+file = os.path.join(filepath, joblib_file)
+
+joblib.dump(LR_Model, file)
