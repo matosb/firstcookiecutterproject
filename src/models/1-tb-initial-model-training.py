@@ -56,7 +56,7 @@ Xtrain, Xtest, Ytrain, Ytest = train_test_split(Iris_data.data,
 LR_Model = LogisticRegression(C=0.1,  
                                max_iter=20, 
                                fit_intercept=True, 
-                               n_jobs=3, 
+                               n_jobs=1, 
                                solver='liblinear')
 
 # Train the Model
