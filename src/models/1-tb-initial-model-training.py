@@ -17,11 +17,15 @@
 # ### From https://www.kaggle.com/prmohanty/python-how-to-save-and-load-ml-models
 
 # %%
-from jupytext.config import find_jupytext_configuration_file
-find_jupytext_configuration_file('.')
+#from jupytext.config import find_jupytext_configuration_file
+#find_jupytext_configuration_file('.')
 
 # %% [markdown]
 # # Entraînement du modèle
+
+# %%
+# Import pour les tests unitaires
+import pytest
 
 # %%
 # Import Required packages 
@@ -67,4 +71,4 @@ print("Test score: {0:.2f} %".format(100 * score))
 # Predict the Labels using the reloaded Model
 Ypredict = LR_Model.predict(Xtest)  
 
-Ypredict
+print(Ypredict)
